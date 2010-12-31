@@ -15,9 +15,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "hoatzin"
   gem.homepage = "http://github.com/rjlee/hoatzin"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "robl@monkeyhelper.com"
+  gem.summary = %Q{SVM Classifier in Ruby}
+  gem.description = %Q{Hoatzin is a text classifier in Ruby that uses SVM for it's classification.}
+  gem.email = "robl@rjlee.net"
   gem.authors = ["robl"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
