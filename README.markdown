@@ -74,6 +74,7 @@ need to recompute the feature vectors.
 ## Acknowledgements
 
 See http://www.igvita.com/2008/01/07/support-vector-machines-svm-in-ruby/ for the original inspiration.
+
 The Vector Space Model implementation is adapted from https://github.com/josephwilk/rsemantic
 
 ## Copyright and License
