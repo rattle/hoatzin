@@ -9,7 +9,7 @@ class TestHoatzin < Test::Unit::TestCase
     end
 
     should "support training and classification" do
-      assert_equal @c.train(:positive, "Thats nice"), [[1, 1]]
+      assert_equal @c.train(:positive, "Thats nice"), [0] #[[1, 1]]
       assert_equal @c.classify("Thats nice"), :positive
     end
 
@@ -22,10 +22,10 @@ class TestHoatzin < Test::Unit::TestCase
       end
 
       should "classify the test set correctly" do
-        #@c.save(:metadata => METADATA_FILE, :model => MODEL_FILE, :update => true)
         TESTING_LABELS.each_with_index do |label, index|
           assert_equal @c.classify(TESTING_DOCS[index]), label
         end
+        #@c.save(:metadata => READONLY_METADATA_FILE, :model => READONLY_MODEL_FILE, :update => false)
       end
 
       should "return the classifications" do
@@ -71,4 +71,5 @@ class TestHoatzin < Test::Unit::TestCase
     end
 
   end
+
 end
