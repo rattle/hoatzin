@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{hoatzin}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["robl"]
-  s.date = %q{2011-01-03}
+  s.date = %q{2011-01-16}
   s.description = %q{Hoatzin is a text classifier in Ruby that uses SVM for it's classification.}
   s.email = %q{robl@rjlee.net}
   s.extra_rdoc_files = [
@@ -25,10 +25,10 @@ Gem::Specification.new do |s|
     "VERSION",
     "hoatzin.gemspec",
     "lib/classifier.rb",
+    "lib/feature_vector/builder.rb",
+    "lib/feature_vector/model.rb",
     "lib/hoatzin.rb",
     "lib/parser.rb",
-    "lib/vector_space/builder.rb",
-    "lib/vector_space/model.rb",
     "test/helper.rb",
     "test/models/readonly-test/metadata",
     "test/models/readonly-test/model",
