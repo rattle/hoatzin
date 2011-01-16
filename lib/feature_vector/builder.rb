@@ -1,7 +1,7 @@
 # Adapted from : https://github.com/josephwilk/rsemantic
 
 module Hoatzin
-  module VectorSpace
+  module FeatureVector
     #A algebraic model for representing text documents as vectors of identifiers.
     #A document is represented as a vector. Each dimension of the vector corresponds to a
     #separate term. If a term occurs in the document, then the value in the vector is non-zero.
@@ -72,7 +72,7 @@ module Hoatzin
         end
 
         vector = Array.new(@vector_keyword_index.length, 0)
-        word_list.each { |word| vector[@vector_keyword_index[word]] += 1 if @vector_keyword_index.has_key?(word)  }
+        word_list.each { |word| vector[@vector_keyword_index[word]] = 1 if @vector_keyword_index.has_key?(word)  }
         vector
       end
 

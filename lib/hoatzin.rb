@@ -5,5 +5,5 @@ require 'pp'
 
 require 'classifier'
 require 'parser'
-require 'vector_space/model'
-require 'vector_space/builder'
+require 'feature_vector/model'
+require 'feature_vector/builder'

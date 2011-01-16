@@ -21,7 +21,7 @@ module Hoatzin
       @metadata_file = options.delete(:metadata) || nil
       @model_file = options.delete(:model) || nil
 
-      @builder = VectorSpace::Builder.new(:parser => Hoatzin::Parser.new)
+      @builder = FeatureVector::Builder.new(:parser => Hoatzin::Parser.new)
 
       # If we have model and metadata files then load them
       load if @metadata_file && @model_file
@@ -106,8 +106,8 @@ module Hoatzin
     end
 
     def assign_model
-      vector_space_model = @builder.build_document_matrix(@documents)
-      @problem = Problem.new(@labels, vector_space_model.matrix)
+      feature_vector_model = @builder.build_document_matrix(@documents)
+      @problem = Problem.new(@labels, feature_vector_model.matrix)
       @model = Model.new(@problem, @parameters)
     end
 

@@ -3,7 +3,7 @@
 #require 'stringio'
 
 module Hoatzin
-  module VectorSpace
+  module FeatureVector
 
     class Model
 
